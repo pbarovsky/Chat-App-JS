@@ -1,0 +1,115 @@
+ :root {
+    --primary-color: #45668e;
+    --secondary-color: #ffffff;
+    --accent-color: #4a76a8;
+    --text-color: #333333;
+    --background-color: #f2f2f2;
+    --message-bubble: #ffffff;
+    --message-bubble-own: #cce7ff;
+    --grey: #dddddd;
+    --border-radius: 50px;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--grey);
+}
+
+.form {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--secondary-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.name {
+    background: var(--message-bubble-own);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 700;
+    min-width: 60px;
+    text-align: center;
+}
+
+.input {
+    flex-grow: 1;
+    height: 40px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 15px 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+.messages {
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 60px;
+    text-decoration: none;
+}
+
+.messages > li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    font-size: 15px;
+    background-color: var(--message-bubble-own);
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+
+}
+
+.messages > li.own {
+    justify-content: flex-end;
+}
+
+.messages > li > .message-content {
+    background-color: var(--message-bubble);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
+.messages > li.own > .message-content {
+    background-color: var(--message-bubble-own);
+}
+
+.messages > li > span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.messages li:nth-child(odd) {
+    background: var(--grey);
+}
